@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&family=Poppins:wght@100;200;300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    height: calc(100vh - 12vh);
+    background-image: linear-gradient(to bottom,#bfd6c7,#c7bd93);
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    
+}
+header{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    background-color: #bfd6c7;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+ul li{
+    list-style: none;
+    margin: 0 20px;
+    transform: 0.8s;
+}
+ul li a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+}
+ul:hover li a {
+    transform: scale(1.2);
+    opacity: .2;
+    filter: blur(5px);
+    color: black;
+}
+ul li a:hover{
+    transform: scale(1.2);
+    opacity: 1;
+    filter: blur(0);
+}
+ul li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ff7876;
+    transform: .8s;
+    transform-origin: right;
+    transform: scaleX(0);
+    z-index: -1;
+}
+ul li a:hover:before{
+    transition: transform .8s;
+    transform-origin: left;
+    transform: scaleX(1);
+}
+div.about{
+    max-width: 600px;
+    margin: 12px;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Fuggles', cursive;
+    border-radius: 5px;
+    box-shadow: -5px 6px 5px 0px rgba(0,0,0,0.24);
+-webkit-box-shadow: -5px 6px 5px 0px rgba(0,0,0,0.24);
+-moz-box-shadow: -5px 6px 5px 0px rgba(0,0,0,0.24);
+}
+div.about > p{
+    text-align: justify;
+    line-height: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+}
+.links > a{
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.links > a:hover{
+    transition: .5s;
+    color: #ff7876;
+    text-decoration: underline;
+}
